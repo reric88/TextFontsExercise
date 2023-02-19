@@ -1,71 +1,70 @@
 /* QUESTION 1 , BONUS 1*/
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap");
 
 /* QUESTION 2 */
 :root {
-    font-family: 'Orbitron';
+  font-family: "Orbitron";
 }
 
 /* QUESTION 3 */
 span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* QUESTION 4, 5, 6, 7, 8 */
 h1 {
-    opacity: 0;
-    font-size: 50px;
-    letter-spacing: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: underline;
-    
+  opacity: 0;
+  font-size: 50px;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 /* QUESTION 9 */
 #series-movies {
-    font-size: 20px;
-} 
+  font-size: 20px;
+}
 
 /* QUESTION 10 */
 h2 {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 /* QUESTION 11 */
 li {
-    opacity: 0;
-    line-height: 2;
+  opacity: 0;
+  line-height: 2;
 }
 
 /* QUESTION 12 */
 #characters {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 /* QUESTION 13 */
 h4 {
-    letter-spacing: 15px;
+  letter-spacing: 15px;
 }
 
 /* These should just be appended to the previous selectors, but I'm separating them here so they are easier to read through */
 
 /* BONUS 2 */
 h4 {
-    font-family: 'Press Start 2P';
+  font-family: "Press Start 2P";
 }
 
 /* BONUS 3 */
-h2, h3, h4 {
-    opacity: 0;
-    text-align: center;
+h2,
+h3,
+h4 {
+  opacity: 0;
+  text-align: center;
 }
 
 /* BONUS 4 */
 li {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 /* BONUS 5 */
@@ -73,340 +72,357 @@ li {
 
 /* BONUS 6, 7 */
 body {
-    color: rgba(255, 255, 255, .6);
-    /* Didn't have starTrek.jpg so here this! */
-    /* background-image: url(./Images/starTrekLogo.jpg);
+  color: rgba(255, 255, 255, 0.6);
+  /* Didn't have starTrek.jpg so here's this! */
+  /* background-image: url(./Images/starTrekLogo.jpg);
     object-fit: contain;
     background-position: center;
     background-size: cover; */
-    /* Got background image! */
+  /* Got background image! */
 }
 
-/* Extra stuff */
+
+
+/* ---------- Extra stuff ---------- */
+
+
 
 body {
-    background-color: #000000;
-    /* background-image: url(./Images/theFinalFrontier.jpg);
+  background-color: #000000;
+  /* background-image: url(./Images/theFinalFrontier.jpg);
     object-fit:fill;
     background-size: cover; */
 }
 
-/* html, body {
-    right: 500px;
-} */
+
 
 /* .divBackgroundContainer {
     position: absolute;
     object-fit: cover;
 } */
 
-.divBackground {
-    background-image: url(./Images/theFinalFrontier.jpg);
-    position: absolute;
-    object-fit: cover;
-    background-size: 100%;
-    height: 150vh;
-    width: 90vw;
-    left: 2%;
-    border-radius: 50%;
-    box-shadow:
-     0px 50px 100px 50px hsl(200, 0%, 0%, 1) inset,
-     -50px -0px 100px 50px hsl(200, 0%, 0%, 1) inset,
-      -50px 0px 100px 50px hsl(200, 0%, 0%, 1) inset,
-       50px -0px 100px 50px hsl(200, 0%, 0%, 1) inset;
-   animation: wobble 10s infinite;
 
-    /* animation: wobble 10s infinite;
-    height: 100vh;
+
+/* This is the provided background image. Applied 4 box-shadows to give vignette effect. Applied a slight wobble animation to give parallax effect. */
+.divBackground {
+  background-image: url(./Images/theFinalFrontier.jpg);
+  position: absolute;
+  object-fit: cover;
+  background-size: 100%;
+  height: 150vh;
+  width: 90vw;
+  left: 2%;
+  border-radius: 50%;
+  box-shadow: 
+    0px 50px 100px 50px hsl(200, 0%, 0%, 1) inset,
+    -50px -0px 100px 50px hsl(200, 0%, 0%, 1) inset,
+    -50px 0px 100px 50px hsl(200, 0%, 0%, 1) inset,
+    50px -0px 100px 50px hsl(200, 0%, 0%, 1) inset;
+  animation: wobble 10s infinite;
+    
+  /* height: 100vh;
     width: 100vw; */
 }
 
 
-/* Warp-Speed */
 
-    /* I can't figure out how to limit the scrolling only to the bottom content! The background expands past the limits of the body because of the expansion of the different elements, but overflow won't keep the scroll-bar from stretching without being hidden, which then won't let us scroll! */
+/* ----- Warp-Speed ----- */
 
-    /* Got it figured out FINALLY. .dot needed the top, bottom, left, right values set to 0 (had them in #zoom & .dot) and background-repeat removed; #zoom and .dot needed to be singled out with some of their own attributes */
+/* I can't figure out how to limit the scrolling only to the bottom content! The background expands past the limits of the body because of the expansion of the different elements, but overflow won't keep the scroll-bar from stretching without being hidden, which then won't let us scroll! */
 
-h1, h2, h3, h4, p, ol, ul, li {
-    position: relative;
-    z-index: 100;
-    animation: none;
-}
+/* Got it figured out FINALLY. .dot needed the top, bottom, left, right values set to 0 (had them in #zoom & .dot) and background-repeat removed; #zoom and .dot needed to be singled out with some of their own properties */
 
+
+
+/* Initially had the below properties set because at one point everything was using the wobble animation from the background. Unnecessary now because the background is linked to a div above the page content */
+
+/* h1,h2,h3,h4,p,ol,ul,li {
+  position: relative;
+  z-index: 100;
+  animation: none;
+} */
+
+
+
+/* Parent of .dot, used to restrain the dots inside the window */
 #zoom {
-    width: 99%;
-    height: 99%;
-    overflow: hidden;
-    position: relative;
+  width: 99%;
+  height: 99%;
+  overflow: hidden;
+  position: relative;
 }
 
 .dot {
-    position: absolute;
+  position: absolute;
 }
 
-#zoom, .dot {
-    overflow-y: hidden;
-  }
-  
-  /* Create size, color and opacity of the dots, make warp infinite */
-  .dot {
-    /* z-index: 4; */
-    background-image: 
-      radial-gradient(1px 1px at 30px 45px, #ffbbbb, #00000000),
-      radial-gradient(2px 2px at 50px 85px, #bbbbff, #00000000),
-      radial-gradient(1px 1px at 35px 180px, #ffffff, #00000000),
-      radial-gradient(2px 2px at 85px 35px, #ffcccc, #00000000),
-      radial-gradient(1px 1px at 115px 95px, #ccccff, #00000000),
-      radial-gradient(2px 2px at 145px 105px, #ffffff, #00000000);
-    /* background-repeat: repeat; */
-    background-size: 200px 200px;
-    animation: zoom 6s infinite;
+#zoom,
+.dot {
+  overflow-y: hidden;
+}
+
+/* Create size, color and opacity of the dots, make warp infinite */
+.dot {
+  /* z-index: 4; */
+  background-image: radial-gradient(1px 1px at 30px 45px, #ffbbbb, #00000000),
+    radial-gradient(2px 2px at 50px 85px, #bbbbff, #00000000),
+    radial-gradient(1px 1px at 35px 180px, #ffffff, #00000000),
+    radial-gradient(2px 2px at 85px 35px, #ffcccc, #00000000),
+    radial-gradient(1px 1px at 115px 95px, #ccccff, #00000000),
+    radial-gradient(2px 2px at 145px 105px, #ffffff, #00000000);
+  /* background-repeat: repeat; */
+  background-size: 200px 200px;
+  animation: zoom 6s infinite;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Determine placement of each image produced above and when the image appears */
+.dot:nth-child(1) {
+  background-position: 50% 50%;
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  background-position: 20% 60%;
+  animation-delay: 1s;
+}
+
+.dot:nth-child(3) {
+  background-position: -20% -30%;
+  animation-delay: 2s;
+}
+
+.dot:nth-child(4) {
+  background-position: 40% -80%;
+  animation-delay: 3s;
+}
+
+.dot:nth-child(5) {
+  background-position: -20% 30%;
+  animation-delay: 4s;
+}
+
+.dot:nth-child(6) {
+  background-position: 60% -55%;
+  animation-delay: 5s;
+}
+
+/* The animation scale */
+@keyframes zoom {
+  0% {
     opacity: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-     }
-  
- /* Determine placement of each image produced above and when the image appears */
-  .dot:nth-child(1) {
-    background-position: 50% 50%;
-    animation-delay: 0s;  
+    transform: scale(0.3);
+    animation-timing-function: ease-in;
   }
+  85% {
+    opacity: 1;
+    transform: scale(3);
+    animation-timing-function: linear;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(4);
+    animation-timing-function: linear;
+  }
+}
 
-  .dot:nth-child(2) {
-    background-position: 20% 60%;
-    animation-delay: 1s;  
-  }
+/* Background parallax/wobble effect */
 
-  .dot:nth-child(3) {
-    background-position: -20% -30%;
-    animation-delay: 2s;  
-  }
-
-  .dot:nth-child(4) {
-    background-position: 40% -80%;
-    animation-delay: 3s;  
-  }
-  
-  .dot:nth-child(5) {
-    background-position: -20% 30%;
-    animation-delay: 4s;  
-  }
-  
-  .dot:nth-child(6) {
-    background-position: 60% -55%;
-    animation-delay: 4s;  
-  }
-  
-  /* The animation scale */
-  @keyframes zoom {
+@keyframes wobble {
+    /* Changed wobble to be more subtle */
     0% {
-      opacity: 0;
-      transform: scale(0.3);
-      animation-timing-function: ease-in;
-    } 
-    85% {
-      opacity: 1;
-      transform: scale(3);
-      animation-timing-function: linear;
-    }
-    100% {
-      opacity: 0;
-      transform: scale(4);
-      animation-timing-function: linear;
-    }
-  }
-  
-
-  /* Background parallax/wobble effect */
-
-  @keyframes wobble {
-    0% {transform: rotate(0deg) scale(1);
-        animation-timing-function: ease-in-out;}
-    25% {transform: rotate(-.5deg) scale(1.02);
-        animation-timing-function: ease-in-out;}
-    50% {transform: rotate(0deg) scale(1);
-        animation-timing-function: ease-in-out;}
-    75% {transform: rotate(.5deg) scale(.98);
-        animation-timing-function: ease-in-out;}
-    100% {transform: rotate(0deg) scale(1);
-        animation-timing-function: ease-in-out;}
-  }
-
-  @keyframes sweepIn {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 0, 0) scale(.0);
+        transform: rotate(.5deg) scale(1);
         animation-timing-function: ease-in-out;
-        
-        }
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 1000px) scale(1);
-        animation-timing-function: ease-in;
-    }
-    }
+      }
+      25% {
+        transform: rotate(-0.3deg) scale(1.02);
+        animation-timing-function: ease-in-out;
+      }
+      100% {
+        transform: rotate(.5deg) scale(1);
+        animation-timing-function: ease-in-out;
+      }  
 
+   /* 0% {
+    transform: rotate(0deg) scale(1);
+    animation-timing-function: ease-in-out;
+  }
+  25% {
+    transform: rotate(-0.5deg) scale(1.02);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    transform: rotate(0.5deg) scale(0.98);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    animation-timing-function: ease-in-out;
+  } */
+}
+
+/* Animation for text to sweep in from background */
+@keyframes sweepIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 1000px) scale(1);
+    animation-timing-function: ease-in;
+  }
+}
+
+/* Animation for text to sweep in from right to left */
 @keyframes sweepLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(1600px);
-        animation-timing-function: ease-out;
-        
-        }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-        animation-timing-function: ease-in;
-    }
-
+  0% {
+    opacity: 0;
+    transform: translateX(1600px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    animation-timing-function: ease-in;
+  }
 }
 
+/* Animation for text to sweep in from left to right */
 @keyframes sweepRight {
-    0% {
-        opacity: 0;
-        transform: translateX(-1600px);
-        animation-timing-function: ease-out;
-        
-        }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-        animation-timing-function: ease-in;
-    }
-
+  0% {
+    opacity: 0;
+    transform: translateX(-1600px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    animation-timing-function: ease-in;
+  }
 }
 
+/* Animation for text to sweep in from bottom to top */
 @keyframes sweepUp {
-    0% {
-        opacity: 0;
-        transform: translateY(500px);
-        animation-timing-function: ease-out;
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-        animation-timing-function: ease-in;
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
 }
 
+/* Text animations and their timing for when to activate so the flow is better. Decided to keep the animations with the elements they are affecting. */
+h1 {
+  animation: sweepIn 10s;
+  animation-fill-mode: forwards;
+}
 
-    h1 {
-        animation: sweepIn 10s;
-        animation-fill-mode: forwards;
-    }
+h2:nth-of-type(1) {
+  animation: sweepLeft 3s;
+  animation-delay: 7s;
+  animation-fill-mode: forwards;
+}
+h2:nth-of-type(2) {
+  animation: sweepLeft 3s;
+  animation-delay: 9.2s;
+  animation-fill-mode: forwards;
+}
 
-    h2:nth-of-type(1) {
-        animation: sweepLeft 3s;
-        animation-delay: 7s;
-        animation-fill-mode: forwards;
-    }
-    h2:nth-of-type(2) {
-        animation: sweepLeft 3s;
-        animation-delay: 9.2s;
-        animation-fill-mode: forwards;
-    }
+ol li:nth-child(1) {
+  animation: sweepRight 2s;
+  animation-delay: 8.2s;
+  animation-fill-mode: forwards;
+}
+ol li:nth-child(2) {
+  animation: sweepRight 2s;
+  animation-delay: 8.4s;
+  animation-fill-mode: forwards;
+}
+ol li:nth-child(3) {
+  animation: sweepRight 2s;
+  animation-delay: 8.6s;
+  animation-fill-mode: forwards;
+}
+ol li:nth-child(4) {
+  animation: sweepRight 2s;
+  animation-delay: 8.8s;
+  animation-fill-mode: forwards;
+}
+ol li:nth-child(5) {
+  animation: sweepRight 2s;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+}
+ol li:nth-child(6) {
+  animation: sweepRight 2s;
+  animation-delay: 9.2s;
+  animation-fill-mode: forwards;
+}
+ol li:nth-child(7) {
+  animation: sweepRight 2s;
+  animation-delay: 9.4s;
+  animation-fill-mode: forwards;
+}
 
+ul li:nth-child(1) {
+  animation: sweepRight 2s;
+  animation-delay: 11s;
+  animation-fill-mode: forwards;
+}
+ul li:nth-child(2) {
+  animation: sweepRight 2s;
+  animation-delay: 11.2s;
+  animation-fill-mode: forwards;
+}
+ul li:nth-child(3) {
+  animation: sweepRight 2s;
+  animation-delay: 11.4s;
+  animation-fill-mode: forwards;
+}
+ul li:nth-child(4) {
+  animation: sweepRight 2s;
+  animation-delay: 11.6s;
+  animation-fill-mode: forwards;
+}
+ul li:nth-child(5) {
+  animation: sweepRight 2s;
+  animation-delay: 11.8s;
+  animation-fill-mode: forwards;
+}
+ul li:nth-child(6) {
+  animation: sweepRight 2s;
+  animation-delay: 12s;
+  animation-fill-mode: forwards;
+}
 
+h3 {
+  animation: sweepUp 2s;
+  animation-delay: 14s;
+  animation-fill-mode: forwards;
+}
 
-
-    ol li:nth-child(1) {
-        animation: sweepRight 2s;
-        animation-delay: 8.2s;
-        animation-fill-mode: forwards;
-    }
-    ol li:nth-child(2) {
-        animation: sweepRight 2s;
-        animation-delay: 8.4s;
-        animation-fill-mode: forwards;
-
-    }
-    ol li:nth-child(3) {
-        animation: sweepRight 2s;
-        animation-delay: 8.6s;
-        animation-fill-mode: forwards;
-
-    }
-    ol li:nth-child(4) {
-        animation: sweepRight 2s;
-        animation-delay: 8.8s;
-        animation-fill-mode: forwards;
-
-    }
-    ol li:nth-child(5) {
-        animation: sweepRight 2s;
-        animation-delay: 9s;
-        animation-fill-mode: forwards;
-
-    }
-    ol li:nth-child(6) {
-        animation: sweepRight 2s;
-        animation-delay: 9.2s;
-        animation-fill-mode: forwards;
-
-    }
-    ol li:nth-child(7) {
-        animation: sweepRight 2s;
-        animation-delay: 9.4s;
-        animation-fill-mode: forwards;
-
-    }
-
-    ul li:nth-child(1) {
-        animation: sweepRight 2s;
-        animation-delay: 11s;
-        animation-fill-mode: forwards;
-    }
-    ul li:nth-child(2) {
-        animation: sweepRight 2s;
-        animation-delay: 11.2s;
-        animation-fill-mode: forwards;
-
-    }
-    ul li:nth-child(3) {
-        animation: sweepRight 2s;
-        animation-delay: 11.4s;
-        animation-fill-mode: forwards;
-
-    }
-    ul li:nth-child(4) {
-        animation: sweepRight 2s;
-        animation-delay: 11.6s;
-        animation-fill-mode: forwards;
-
-    }
-    ul li:nth-child(5) {
-        animation: sweepRight 2s;
-        animation-delay: 11.8s;
-        animation-fill-mode: forwards;
-
-    }
-    ul li:nth-child(6) {
-        animation: sweepRight 2s;
-        animation-delay: 12s;
-        animation-fill-mode: forwards;
-
-    }
-
-    h3 {
-        animation: sweepUp 2s;
-        animation-delay: 14s;
-        animation-fill-mode: forwards;
-    }
-
-    p {
-        opacity: 0;
-        animation: sweepUp 2s;
-        animation-delay: 15s;
-        animation-fill-mode: forwards;
-
-    }
-    h4 {
-        animation: sweepIn 10s;
-        animation-delay: 15s;
-        animation-fill-mode: forwards;
-
-    }
-
+p {
+  opacity: 0;
+  animation: sweepUp 2s;
+  animation-delay: 15s;
+  animation-fill-mode: forwards;
+}
+h4 {
+  animation: sweepIn 10s;
+  animation-delay: 15s;
+  animation-fill-mode: forwards;
+}
