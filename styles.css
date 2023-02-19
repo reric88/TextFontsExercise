@@ -73,6 +73,7 @@ li {
 /* BONUS 6, 7 */
 body {
   color: rgba(255, 255, 255, 0.6);
+  overflow-x: hidden;
   /* Didn't have starTrek.jpg so here's this! */
   /* background-image: url(./Images/starTrekLogo.jpg);
     object-fit: contain;
@@ -96,10 +97,62 @@ body {
 
 
 
-/* .divBackgroundContainer {
+/* ----- Menu Slide on hover ----- */
+
+/* Image alignment and Slide picture left */
+#menu {
+    width: fit-content;
+    z-index: 98;
     position: absolute;
-    object-fit: cover;
-} */
+    right: -260px;
+    top: 100px;
+    width: 300px;
+    transition: right 3s;
+}
+
+/* Slide picture this much on hover */
+#menu:hover {
+    right: 70px;
+}
+
+
+
+#menu2 {
+    width: fit-content;
+    z-index: 99;
+    position: absolute;
+    right: -400px;
+    top: 200px;
+    width: 440px;
+    transition: right 3s;
+}
+
+#menu2:hover {
+    right: 23px;
+}
+
+
+
+#menu3 {
+    width: fit-content;
+    z-index: 100;
+    position: absolute;
+    right: -400px;
+    top: 300px;
+    width: 440px;
+    transition: right 3s;
+}
+
+#menu3:hover {
+    right: 23px;
+}
+
+#menuArrow {
+    z-index: 97;
+float: inline-start; 
+position: inherit;
+left: 10px;
+}
 
 
 
@@ -230,7 +283,7 @@ body {
   }
 }
 
-/* Background parallax/wobble effect */
+/* ----- Background parallax/wobble effect ----- */
 
 @keyframes wobble {
     /* Changed wobble to be more subtle */
@@ -269,7 +322,7 @@ body {
   } */
 }
 
-/* Animation for text to sweep in from background */
+/* ----- Animation for text to sweep in from background ----- */
 @keyframes sweepIn {
   0% {
     opacity: 0;
@@ -283,7 +336,7 @@ body {
   }
 }
 
-/* Animation for text to sweep in from right to left */
+/* ----- Animation for text to sweep in from right to left ----- */
 @keyframes sweepLeft {
   0% {
     opacity: 0;
@@ -297,7 +350,7 @@ body {
   }
 }
 
-/* Animation for text to sweep in from left to right */
+/* ----- Animation for text to sweep in from left to right ----- */
 @keyframes sweepRight {
   0% {
     opacity: 0;
@@ -311,7 +364,7 @@ body {
   }
 }
 
-/* Animation for text to sweep in from bottom to top */
+/* ----- Animation for text to sweep in from bottom to top ----- */
 @keyframes sweepUp {
   0% {
     opacity: 0;
@@ -325,7 +378,7 @@ body {
   }
 }
 
-/* Text animations and their timing for when to activate so the flow is better. Decided to keep the animations with the elements they are affecting. */
+/* ----- Text animations and their timing for when to activate so the flow is better. Decided to keep the animations with the elements they are affecting. ----- */
 h1 {
   animation: sweepIn 10s;
   animation-fill-mode: forwards;
@@ -415,7 +468,7 @@ h3 {
   animation-fill-mode: forwards;
 }
 
-p {
+p:not(#menuArrow) {
   opacity: 0;
   animation: sweepUp 2s;
   animation-delay: 15s;
